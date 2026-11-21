@@ -1,0 +1,27 @@
+{
+    "title": "Votre profil",
+    "tabs" : {
+        "account": "Profil",
+        "twofa": "2FA",
+        "api": "API",
+        "custom": "Préférences"
+    },
+
+    "account": {
+        "pseudo": "Pseudo",
+        "email": "Adresse email",
+        "password": "Mot de passe",
+        "save": "Enregistrer"
+    },
+
+    "toast": {
+        "success": {
+            "title": "Succès",
+            "description": "Le compte à été mis à jour"
+        },
+        "error": {
+            "title": "Erreur",
+            "description": "Imposible de mettre à jour le compte"
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "account": "Mon compte",
+    "menu": {
+      "profile": "Profil",
+      "logout": "Déconnexion",
+      "admin": "Admin"
+    }
+  }

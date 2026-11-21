@@ -1,0 +1,26 @@
+{
+  "name": "serverly-frontend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^3.1.1",
+    "chart.js": "^4.4.9",
+    "tailwindcss": "^4.1.5",
+    "vue": "^3.5.13",
+    "vue-chartjs": "^5.3.2",
+    "vue-router": "^4.5.1",
+    "xterm": "^5.3.0",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@iconify-json/solar": "^1.2.2",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.4"
+  }
+}

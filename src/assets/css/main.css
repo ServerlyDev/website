@@ -1,0 +1,139 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* ------------------------------------------------------------------
+ * Design system Serverly
+ * ------------------------------------------------------------------ */
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root {
+  --ui-radius: 0.5rem;
+
+  /* Dimensions de la structure */
+  --app-sidebar-width: 16rem;
+  --app-topbar-height: 4rem;
+}
+
+.dark {
+  /* Fond de page (plus sombre que les cartes) */
+  --app-bg: #090b10;
+
+  /* Surfaces */
+  --ui-bg: #0f1218;
+  --ui-bg-muted: #12161d;
+  --ui-bg-elevated: #161a22;
+  --ui-bg-accented: #1d222c;
+  --ui-bg-inverted: #f4f5f7;
+
+  /* Bordures */
+  --ui-border: #1f2430;
+  --ui-border-muted: #191d27;
+  --ui-border-accented: #2c3340;
+  --ui-border-inverted: #f4f5f7;
+
+  /* Texte */
+  --ui-text-dimmed: #5d6573;
+  --ui-text-muted: #8a919e;
+  --ui-text-toned: #b3b9c3;
+  --ui-text: #d4d8de;
+  --ui-text-highlighted: #f4f5f7;
+  --ui-text-inverted: #090b10;
+}
+
+html,
+body {
+  background-color: var(--app-bg);
+  color: var(--ui-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv11', 'ss01';
+}
+
+::selection {
+  background-color: color-mix(in oklab, var(--ui-primary) 35%, transparent);
+}
+
+/* Barres de défilement discrètes */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ui-border-accented) transparent;
+}
+
+/* ------------------------------------------------------------------
+ * Classes utilitaires partagées
+ * ------------------------------------------------------------------ */
+
+@layer components {
+  /* Conteneur principal d'une page */
+  .page {
+    @apply mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-8;
+  }
+
+  /* Carte générique */
+  .panel {
+    @apply rounded-(--ui-radius) border border-(--ui-border) bg-(--ui-bg);
+  }
+
+  .panel-header {
+    @apply flex items-center justify-between gap-4 border-b border-(--ui-border) px-5 py-4;
+  }
+
+  .panel-title {
+    @apply text-sm font-semibold text-(--ui-text-highlighted);
+  }
+
+  .panel-description {
+    @apply mt-0.5 text-sm text-(--ui-text-muted);
+  }
+
+  .panel-body {
+    @apply p-5;
+  }
+
+  .panel-footer {
+    @apply flex items-center justify-end gap-3 border-t border-(--ui-border) bg-(--ui-bg-muted) px-5 py-3.5 rounded-b-(--ui-radius);
+  }
+
+  /* Section de formulaire : titre à gauche, champs à droite */
+  .form-section {
+    @apply grid gap-x-8 gap-y-5 py-6 first:pt-0 last:pb-0 lg:grid-cols-3;
+  }
+
+  .form-section + .form-section {
+    @apply border-t border-(--ui-border);
+  }
+
+  .form-section-title {
+    @apply text-sm font-semibold text-(--ui-text-highlighted);
+  }
+
+  .form-section-description {
+    @apply mt-1 text-sm text-(--ui-text-muted);
+  }
+
+  .form-grid {
+    @apply grid gap-5 sm:grid-cols-2 lg:col-span-2;
+  }
+
+  /* Liste clé / valeur */
+  .description-list {
+    @apply grid divide-y divide-(--ui-border) sm:grid-cols-2 sm:divide-y-0;
+  }
+
+  .description-item {
+    @apply flex flex-col gap-1 px-5 py-4 sm:border-b sm:border-(--ui-border);
+  }
+
+  .description-term {
+    @apply text-xs font-medium uppercase tracking-wide text-(--ui-text-dimmed);
+  }
+
+  .description-value {
+    @apply text-sm font-medium text-(--ui-text-highlighted);
+  }
+}

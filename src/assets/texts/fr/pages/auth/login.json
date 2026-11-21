@@ -1,0 +1,26 @@
+{
+    "title": "Connexion",
+    "description": "Connectez-vous pour accéder à votre espace",
+
+    "form": {
+        "field": "Identifiants de connexion :",
+        "mail": "Adresse mail",
+        "password": "Mot de passe"
+    },
+
+    "buttons": {
+        "login": "Se connecter",
+        "register": "S'inscrire"
+    },
+
+    "alert" : {
+        "success": {
+            "title": "Connexion réussie",
+            "description": "Bienvenue sur votre tableau de bord"
+        },
+        "error": {
+            "title": "Erreur de connexion",
+            "description": "Vérifiez vos identifiants et réessayez"
+        }
+    }
+}
